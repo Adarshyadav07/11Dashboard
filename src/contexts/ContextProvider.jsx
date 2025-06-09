@@ -23,13 +23,15 @@ const setMode = (e) => {
 
     localStorage.setItem('themeMode',  e.target.value);
 
-    setThemeSettings(false)
+    setThemeSettings(false);
 }
 
 const setColor = (color) => {
     setCurrentColor(color);
 
     localStorage.setItem('colorMode', color);
+
+    setThemeSettings(false);
 }
 
 const handleClick = (clicked) => {
@@ -46,7 +48,7 @@ const handleClick = (clicked) => {
             screenSize, 
             setScreenSize,
             currentColor, currentMode,
-            setCurrentColor, setCurrentMode,
+            
             themeSettings, setThemeSettings,
             setMode, setColor
 
